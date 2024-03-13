@@ -6,7 +6,7 @@
             <!--  <layout> 로그 메시지 출력 패턴 지정  -->
             <layout class="ch.qos.logback.classic.PatternLayout">
                 <pattern>
-                    [USER-LOG] [%-5level] %d{yyyy-MM-dd HH:mm:ss} [%thread] [%logger{40}:%line] - %msg%n
+                    [ORDER-LOG] [%-5level] %d{yyyy-MM-dd HH:mm:ss} [%thread] [%logger{40}:%line] - %msg%n
                 </pattern>
             </layout>
         </encoder>
