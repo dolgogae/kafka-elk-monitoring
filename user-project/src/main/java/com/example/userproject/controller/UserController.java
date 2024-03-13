@@ -12,6 +12,9 @@ public class UserController {
 
     @GetMapping
     public String getUser(){
+        log.info("info log");
+        log.warn("warning log");
+        log.error("error log");
         return "user";
     }
 }

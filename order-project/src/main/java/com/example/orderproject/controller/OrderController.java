@@ -7,11 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j(topic = "elk")
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/order")
 public class OrderController {
 
     @GetMapping
     public String getOrder(){
+        log.info("info log");
+        log.warn("warning log");
+        log.error("error log");
         return "order";
     }
 }
