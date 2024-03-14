@@ -136,6 +136,28 @@ services:
     networks:
       - elk
 
+  user-app:
+    build:
+      context: ./user-project
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+    networks:
+      - elk
+
+  order-app:
+    build:
+      context: ./order-project 
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev 
+    networks:
+      - elk
+
 networks:
   elk:
     driver: bridge
